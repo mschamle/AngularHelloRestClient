@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiUrl: window["env"]["apiUrl"] || "http://localhost:8080/HelloWorldRestService/hello",
   production: false
 };
 

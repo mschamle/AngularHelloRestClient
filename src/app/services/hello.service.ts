@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import {Observable} from "rxjs";
 
 export class HelloService {
 
-  private REST_API_SERVER = "http://localhost:8080/HelloWorldRestService/hello";
+  private REST_API_SERVER = environment.apiUrl;
 
   constructor(private httpClient: HttpClient) { }
 
